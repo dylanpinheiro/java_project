@@ -97,6 +97,10 @@ class MyDate3
             {
                 out2 = out2 + Integer.toString(dd) + suffix[4] + "-";
             }
+            if(Integer.toString(dd).charAt(1) == '1' && Integer.toString(dd).length() > 1)
+            {
+                out2 = out2 + Integer.toString(dd) + suffix[1] + "-";
+            }
             if(Integer.toString(dd).charAt(1) == '3' && Integer.toString(dd).charAt(0) == '1' && Integer.toString(dd).length() > 1)
             {
                 out2 = out2 + Integer.toString(dd) + suffix[4] + "-";
