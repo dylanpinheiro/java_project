@@ -97,7 +97,11 @@ class MyDate3
             {
                 out2 = out2 + Integer.toString(dd) + suffix[4] + "-";
             }
-            if(Integer.toString(dd).charAt(1) == '3' && Integer.toString(dd).length() > 1)
+            if(Integer.toString(dd).charAt(1) == '3' && Integer.toString(dd).charAt(0) == '1' && Integer.toString(dd).length() > 1)
+            {
+                out2 = out2 + Integer.toString(dd) + suffix[4] + "-";
+            }
+            if(Integer.toString(dd).charAt(1) == '2' && Integer.toString(dd).charAt(0) == '1' && Integer.toString(dd).length() > 1)
             {
                 out2 = out2 + Integer.toString(dd) + suffix[4] + "-";
             }
@@ -109,7 +113,7 @@ class MyDate3
             {
                 out2 = out2 + Integer.toString(dd) + suffix[4] + "-";
             }
-            else if(dd > 10 && Integer.toString(dd).charAt(1) != '3')
+            else if(dd > 10 && Integer.toString(dd).charAt(1) == '3' && Integer.toString(dd).charAt(0) != '1'|| Integer.toString(dd).charAt(1) == '2' && Integer.toString(dd).charAt(0) != '1')
             {
                 out2 = out2 + Integer.toString(dd) + suffix[Integer.parseInt(Integer.toString(dd).charAt(1)+"")] + "-";
             }
