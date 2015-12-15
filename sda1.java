@@ -22,14 +22,14 @@ class sda1
         v1 = in.nextInt();
         for(int i=0;i<v1;i++)
         {
-            System.out.println("Enter value : "+(i+1));
+            System.out.println("Enter value "+(i+1));
             a[i] = in.nextInt();
         }
-        System.out.print("Enter the number of values for array 2 : ");
+        System.out.print("Enter the number of values for array 2 ");
         v2 = in.nextInt();
         for(int i=0;i<v2;i++)
         {
-            System.out.println("Enter value : "+(i+1));
+            System.out.println("Enter value "+(i+1));
             b[i] = in.nextInt();
         }
     }
@@ -39,6 +39,7 @@ class sda1
         int k = 0;
         while(k < (v1+v2))
         {
+            boolean boo = false;
             for(int i=0;i<v1;i++)
             {
                 ab[k] = a[i];
@@ -46,11 +47,23 @@ class sda1
             }
             for(int i=0;i<v2;i++)
             {
-                ab[k] = b[i];
-                k++;
+                for(int j=0;j<v1;j++)
+                {
+                    System.out.println(b[i]+" "+a[j]);
+                    if(b[i] == a[j])
+                    {
+                        boo = true;
+                    }
+                }
+                if(boo == false)
+                {
+                    ab[k] = b[i];
+                    k++;
+                } 
             }
         }
     }
+
     void Display()
     {
         System.out.println("Joined array : ");
@@ -59,6 +72,7 @@ class sda1
             System.out.print(ab[i]+" ");
         }
     }
+
     public static void main(String args[])throws IOException
     {
         sda1 ob = new sda1();
