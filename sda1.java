@@ -25,7 +25,7 @@ class sda1
             System.out.println("Enter value "+(i+1));
             a[i] = in.nextInt();
         }
-        System.out.print("Enter the number of values for array 2 ");
+        System.out.print("Enter the number of values for array 2 : ");
         v2 = in.nextInt();
         for(int i=0;i<v2;i++)
         {
